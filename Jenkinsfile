@@ -11,8 +11,8 @@ pipeline {
         stage('Build backend') {
             steps {
                 // Build the Python backend
-                sh 'pip install -r requirements.txt'
-                // Additional build steps if required
+               sh 'cd frontend && npm install && npm run build'
+                sh 'cd backend && pip install -r requirements.txt'
             }
         }
 
