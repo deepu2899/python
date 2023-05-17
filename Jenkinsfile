@@ -18,8 +18,7 @@ pipeline {
                 sh 'npm install'
                 sh 'npm run build'
             }
-        }
-        }     
+        }    
     }
         stage('Build backend') {
             steps {
