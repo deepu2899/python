@@ -14,7 +14,7 @@ pipeline {
                 // Build the React frontend
                  def workspacePath = pwd(var/lib/jenkins/workspace)
                     def projectDirectory = "${var/lib/jenkins/workspace}/Deepak_sharma_master"
-                    dir(projectDirectory) {frontend
+                dir(projectDirectory) {frontend}
                 sh 'npm install'
                 sh 'npm run build'
             }
