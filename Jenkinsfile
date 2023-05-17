@@ -20,7 +20,7 @@ pipeline {
             steps {
                 // Copy files to the server
                //sh 'rsync -avz --delete frontend/ ssh root@165.22.66.188:/var/www/frontend/'
-              sh 'rsync -avz --delete /var/lib/jenkins/workspace/Deepak_sharma_master/ root@165.22.66.188:/var/www/backend/'
+              sh 'rsync -avz --delete /var/lib/jenkins/workspace/Deepak_sharma_master/ ssh root@165.22.66.188:/var/www/backend/'
 
             }
         }
