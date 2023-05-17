@@ -11,8 +11,9 @@ pipeline {
         stage('Build backend') {
             steps {
                 // Build the Python backend
-               sh 'cd frontend && npm install && npm run build'
-                sh 'cd backend && pip install -r requirements.txt'
+               sh 'pip install -r requirements.txt'
+                sh 'openssl rand 256 > secret.key'
+                  sh 'cd frontend && npm install && npm run build'
             }
         }
 
