@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Copy files to the server
-                sh 'rsync -avz --delete frontend/ ssh root@165.22.66.188:/var/www/frontend/'
+               //sh 'rsync -avz --delete frontend/ ssh root@165.22.66.188:/var/www/frontend/'
                 sh 'rsync -avz --delete backend/ ssh root@165.22.66.188/var/www/backend/'
             }
         }
